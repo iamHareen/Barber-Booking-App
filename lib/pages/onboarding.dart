@@ -1,3 +1,4 @@
+import 'package:barber_booking_app/pages/home.dart';
 import 'package:flutter/material.dart';
 
 class Onboarding extends StatefulWidget {
@@ -18,19 +19,25 @@ class _OnboardingState extends State<Onboarding> {
           children: [
             Image.asset("images/barber.png"),
             const SizedBox(height: 50.0),
-            Container(
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 20.0, vertical: 20.0),
-              decoration: BoxDecoration(
-                color: const Color(0xFFdf711a),
-                borderRadius: BorderRadius.circular(30),
-              ),
-              child: const Text(
-                "Get a Stylish Haircut",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 22.0,
-                    fontWeight: FontWeight.bold),
+            GestureDetector(
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => const Home()));
+              },
+              child: Container(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: 20.0, vertical: 20.0),
+                decoration: BoxDecoration(
+                  color: const Color(0xFFdf711a),
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                child: const Text(
+                  "Get a Stylish Haircut",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 22.0,
+                      fontWeight: FontWeight.bold),
+                ),
               ),
             )
           ],
