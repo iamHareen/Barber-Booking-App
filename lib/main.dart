@@ -1,3 +1,4 @@
+import 'package:barber_booking_app/pages/login.dart';
 import 'package:barber_booking_app/pages/onboarding.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +12,8 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Onboarding()
+      // home: Onboarding()
+      home: LogIn()
     );
   }
 }
