@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Booking extends StatefulWidget {
   String service;
-  Booking({required this.service});
+  Booking({super.key, required this.service});
 
   @override
   State<Booking> createState() => _BookingState();
@@ -73,7 +73,7 @@ class _BookingState extends State<Booking> {
             const SizedBox(
               height: 20.0,
             ),
-            Container(
+            SizedBox(
                 width: MediaQuery.of(context).size.width,
                 child: Image.asset(
                   'images/discount.png',
@@ -162,7 +162,7 @@ class _BookingState extends State<Booking> {
                     height: 20.0,
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.center, 
                     children: [
                       GestureDetector(
                         onTap: () {

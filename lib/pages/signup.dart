@@ -119,9 +119,9 @@ class _SignUpState extends State<SignUp> {
                     ),
                   ),
                   const Spacer(),
-                  Row(
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.end,
-                    children: const [
+                    children: [
                       Text(
                         "Already have an account?",
                         style: TextStyle(
@@ -136,9 +136,9 @@ class _SignUpState extends State<SignUp> {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => const LogIn()));
                     },
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.end,
-                      children: const [
+                      children: [
                         Text(
                           "Sign In",
                           style: TextStyle(

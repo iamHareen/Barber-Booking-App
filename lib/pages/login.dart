@@ -82,9 +82,9 @@ class _LogInState extends State<LogIn> {
                   const SizedBox(
                     height: 20,
                   ),
-                  Row(
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.end,
-                    children: const [
+                    children: [
                       Text(
                         "Forgot Password",
                         style: TextStyle(
@@ -118,9 +118,9 @@ class _LogInState extends State<LogIn> {
                     ),
                   ),
                   const Spacer(),
-                  Row(
+                  const Row(
                     mainAxisAlignment: MainAxisAlignment.end,
-                    children: const [
+                    children: [
                       Text(
                         "Don't have an account?",
                         style: TextStyle(
@@ -135,9 +135,9 @@ class _LogInState extends State<LogIn> {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => const SignUp()));
                     },
-                    child: Row(
+                    child: const Row(
                       mainAxisAlignment: MainAxisAlignment.end,
-                      children: const [
+                      children: [
                         Text(
                           "Sign Up",
                           style: TextStyle(
