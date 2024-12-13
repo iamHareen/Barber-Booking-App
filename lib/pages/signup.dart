@@ -1,14 +1,14 @@
-import 'package:barber_booking_app/pages/signup.dart';
+import 'package:barber_booking_app/pages/login.dart';
 import 'package:flutter/material.dart';
 
-class LogIn extends StatefulWidget {
-  const LogIn({super.key});
+class SignUp extends StatefulWidget {
+  const SignUp({super.key});
 
   @override
-  State<LogIn> createState() => _LogInState();
+  State<SignUp> createState() => _SignUpState();
 }
 
-class _LogInState extends State<LogIn> {
+class _SignUpState extends State<SignUp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +26,7 @@ class _LogInState extends State<LogIn> {
                 Color(0xFF311937),
               ])),
               child: const Text(
-                "Hello\nSign in!",
+                "Create Your\nAccount",
                 style: TextStyle(
                     color: Colors.white,
                     fontSize: 30.0,
@@ -34,8 +34,8 @@ class _LogInState extends State<LogIn> {
               ),
             ),
             Container(
-              padding:
-                  const EdgeInsets.only(top: 40.0, left: 30.0, right: 30.0, bottom: 50.0),
+              padding: const EdgeInsets.only(
+                  top: 40.0, left: 30.0, right: 30.0, bottom: 50.0),
               margin:
                   EdgeInsets.only(top: MediaQuery.of(context).size.height / 4),
               height: MediaQuery.of(context).size.height,
@@ -49,6 +49,22 @@ class _LogInState extends State<LogIn> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  const Text(
+                    "Name",
+                    style: TextStyle(
+                        color: Color(0xFFB91635),
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.w500),
+                  ),
+                  const TextField(
+                    decoration: InputDecoration(
+                      hintText: "Name",
+                      prefixIcon: Icon(Icons.person_outline),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
                   const Text(
                     "Gmail",
                     style: TextStyle(
@@ -80,21 +96,6 @@ class _LogInState extends State<LogIn> {
                     obscureText: true,
                   ),
                   const SizedBox(
-                    height: 20,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: const [
-                      Text(
-                        "Forgot Password",
-                        style: TextStyle(
-                            color: Color(0xFF311937),
-                            fontSize: 18,
-                            fontWeight: FontWeight.w500),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(
                     height: 60,
                   ),
                   Container(
@@ -109,7 +110,7 @@ class _LogInState extends State<LogIn> {
                         borderRadius: BorderRadius.circular(30)),
                     child: const Center(
                       child: Text(
-                        "SIGN IN",
+                        "SIGN UP",
                         style: TextStyle(
                             color: Colors.white,
                             fontSize: 25,
@@ -122,7 +123,7 @@ class _LogInState extends State<LogIn> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: const [
                       Text(
-                        "Don't have an account?",
+                        "Already have an account?",
                         style: TextStyle(
                             color: Color(0xFF311937),
                             fontSize: 17,
@@ -131,15 +132,15 @@ class _LogInState extends State<LogIn> {
                     ],
                   ),
                   GestureDetector(
-                     onTap: () {
+                    onTap: () {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => const SignUp()));
+                          MaterialPageRoute(builder: (context) => const LogIn()));
                     },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: const [
                         Text(
-                          "Sign Up",
+                          "Sign In",
                           style: TextStyle(
                               color: Color(0Xff621d3c),
                               fontSize: 20,
